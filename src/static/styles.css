@@ -74,6 +74,57 @@ section h3 {
   margin-bottom: 8px;
 }
 
+/* New participants styles */
+.participants-section {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed #eee;
+}
+
+.participants-section strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #1a237e;
+}
+
+.participants-list {
+  /* height of a single participant row */
+  --participant-item-height: 2.2rem;
+
+  list-style: disc;
+  padding-left: 18px;
+  margin: 0;
+  display: block;
+
+  /* show 2.5 records */
+  max-height: calc(3 * var(--participant-item-height));
+  overflow: auto;
+}
+
+.participants-list li {
+  margin: 6px 0;
+  display: flex;
+  align-items: center;
+  height: var(--participant-item-height);
+}
+
+/* small pill/chip inside each list item for a clean look */
+.participant-chip {
+  display: inline-block;
+  padding: 4px 8px;
+  background: linear-gradient(180deg, #eef3ff, #e0e7ff);
+  color: #0c2c7a;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(10, 25, 80, 0.06);
+}
+
+/* fallback text when no participants */
+.no-participants {
+  color: #666;
+  font-style: italic;
+}
+
 .form-group {
   margin-bottom: 15px;
 }
